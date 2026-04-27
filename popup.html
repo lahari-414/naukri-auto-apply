@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Naukri Auto Apply</title>
+  <style>
+    body { width: 350px; font-family: Arial, sans-serif; padding: 10px; }
+    h2 { color: #2d6edd; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { background: #2d6edd; color: white; padding: 5px; }
+    td { padding: 5px; border: 1px solid #ddd; }
+    tr:nth-child(even) { background: #f0f8ff; }
+    .btn { background: #2d6edd; color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px; margin: 5px 2px; }
+    .total { color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Naukri Auto Apply</h2>
+  <p>Total Applied: <span class="total" id="total">0</span></p>
+  <button class="btn" id="startBtn">▶ Start Auto Apply</button>
+  <button class="btn" id="reportBtn">📊 View Report</button>
+  <button class="btn" id="clearBtn">🗑 Clear Data</button>
+  <div id="reportDiv" style="display:none; margin-top:10px;">
+    <table>
+      <thead><tr><th>#</th><th>Company</th><th>Job Title</th><th>Keyword</th><th>Posted</th></tr></thead>
+      <tbody id="jobList"></tbody>
+    </table>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
