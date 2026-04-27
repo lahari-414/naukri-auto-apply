@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Naukri Auto Apply",
+  "version": "1.0",
+  "description": "Auto apply jobs on Naukri with company name, keyword and date",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.naukri.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.naukri.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Naukri Auto Apply"
+  }
+}
